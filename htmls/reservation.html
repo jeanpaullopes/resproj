@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Reserva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-background">
+        <div class="header-left">
+            <a href="menu.html">
+                <img src="#" alt="Voltar" width="24"> <!-- adicionar icone de voltar -->
+            </a>
+        </div>
+        <div class="header-center">
+            <h2>Nova Reserva</h2>
+        </div>
+        <div class="header-right">
+            <img src="#" alt="Menu" width="24"> <!-- adicionar icone de menu? -->
+        </div>
+    </header>
+    <main class="reserva-container">
+        <form class="reserva-form">
+            <label for="nome" class="reserva-label">Nome:</label>
+            <input type="text" id="nome" class="reserva-input" placeholder="Digite seu nome">
+            <label for="pessoas" class="reserva-label">Nº de Pessoas:</label>
+            <input type="number" id="pessoas" class="reserva-input" placeholder="Quantas pessoas?">
+            <label for="data" class="reserva-label">Data:</label>
+            <input type="date" id="data" class="reserva-input">
+            <label for="hora" class="reserva-label">Horário:</label>
+            <input type="time" id="hora" class="reserva-input">
+            <label for="obs" class="reserva-label">Observação:</label>
+            <textarea id="obs" class="reserva-input reserva-textarea" placeholder="Alguma observação?"></textarea>
+            <div class="reserva-botoes">
+                <button type="submit" class="btn-confirmar">Confirmar</button>
+                <button type="button" class="btn-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
