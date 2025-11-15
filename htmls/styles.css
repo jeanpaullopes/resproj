@@ -96,11 +96,25 @@ body {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+.selected {
+    background-color: #FFD700;
+    padding: 6px 12px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
 .main-selector-pizza {
     margin: 32px 16px 0 16px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.main-selector-pizza-order {
+    margin: 32px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .pizza {
@@ -132,10 +146,6 @@ body {
     color: gray;
 }
 
-.pizza-info-name {
-
-}
-
 .pizza-info-more {
     color: gray;
 }
@@ -144,8 +154,50 @@ body {
     color: gray;
 }
 
-.pizza-info-price {
+.pizza-order {
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    gap: 24px;
+    padding: 16px;
+}
 
+.pizza-order-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pizza-order-more-options {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.pizza-order-more-options-rate{
+    color: #FFD700;
+    text-shadow: 1px 1px 1px black;
+}
+
+.pizza-order-title {
+    font-size: 22px;
+}
+
+.pizza-order-subtitle {
+    color: gray;
+}
+
+.pizza-order-price {
+    position: absolute;
+    top: 6%;
+    right: 6%;
+    font-size: 20px;
 }
 
 .main-profile-card {
