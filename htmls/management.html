@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Resproj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="management-page">
+    <header class="management-top-header">
+        <a href="menu.html">
+            <img src="../img/returnIcon.png" class="management-back-btn">
+        </a>
+        <div class="management-header-text">
+            <h4>Gerenciamento</h4>
+            <h2>Cardápio de Pizzas</h2>
+        </div>
+        <div class="management-stats">
+            <div class="management-stat-card">
+                <img src="../img/Box.png" alt="">
+                <h3>Total</h3>
+                <p>5</p>
+            </div>
+            <div class="management-stat-card">
+                <img src="../img/Document.png" alt="">
+                <h3>Disponíveis</h3>
+                <p>3</p>
+            </div>
+            <div class="management-stat-card">
+                <img src="../img/Mask Group.png" alt="">
+                <h3>Preço Médio</h3>
+                <p>R$ 56</p>
+            </div>
+            <div class="management-stat-card">
+                <img src="../img/Grafica Metrica.png" alt="">
+                <h3>Vendas Total</h3>
+                <p>1169</p>
+            </div>
+        </div>
+        <button class="management-add-btn">Adicionar Nova Pizza +</button>
+    </header>
+    <section class="management-search-section">
+        <input type="text" placeholder="Buscar por nome">
+        <select>
+            <option>Todas Categorias</option>
+        </select>
+        
+    <!--Adicionar o indisponivel no js-->
+    </section>
+        <section class="management-list-section">
+        <h3>Sabores Disponíveis (5)</h3>
+
+        <div class="management-pizza-card">
+            <img src="../img/margherita.png" class="management-pizza-img">
+
+            <div class="management-pizza-info">
+                <div class="management-title-line">
+                    <h2>Margherita</h2>
+                    <span class="management-discount">25% off</span>
+                    <span class="management-tag">Especial</span>
+                </div>
+
+                <p class="management-description">
+                    Molho de tomate, mussarela, manjericão fresco e azeite
+                </p>
+
+                <div class="management-ingredients">
+                    <span>Mussarela</span>
+                    <span>Manjericão</span>
+                    <span>Azeite</span>
+                    <span>Molho de tomate</span>
+                </div>
+
+                <div class="management-info-row">
+                    <span><img src="../img/Group.png"> 25min</span>
+                    <span><img src="../img/Star 1.png"> 4.6</span>
+                    <span><img src="../img/SVGRepo_iconCarrier.png"> 100 Vendas</span>
+                </div>
+
+                <div class="management-price-row">
+                    <span>Preço (Média): </span>
+                    <span class="price">R$ 59.90</span>
+                </div>
+
+                <div class="management-size-prices">
+                    <span>P: R$ 45.90</span>
+                    <span>M: R$ 59.90</span>
+                    <span>G: R$ 72.90</span>
+                </div>
+
+                <div class="management-actions">
+                    <button class="management-edit-btn">Editar</button>
+                    <button class="management-disable-btn">Desabilitar</button>
+                    <a href="#"><img src="../img/Trash.png" class="management-delete-btn"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="management-pizza-card">
+            <img src="../img/calabreso.png" class="management-pizza-img">
+            <div class="management-pizza-info">
+                <div class="management-title-line">
+                    <h2>Calabresa</h2>
+                    <span class="management-tag">Tradicional</span>
+                </div>
+                <p class="management-description">
+                    Molho de tomate, calabresa, azeite e mussarela
+                </p>
+                <div class="management-ingredients">
+                    <span>Molho de tomate</span>
+                    <span>calabresa</span>
+                    <span>Azeite</span>
+                    <span>mussarela</span>
+                </div>
+                <div class="management-info-row">
+                    <span><img src="../img/Group.png"> 20min</span>
+                    <span><img src="../img/Star 1.png"> 4.3</span>
+                    <span><img src="../img/SVGRepo_iconCarrier.png"> 80 Vendas</span>
+                </div>
+                <div class="management-price-row">
+                    <span>Preço (Média): </span>
+                    <span class="price">R$ 52.90</span>
+                </div>
+                <div class="management-size-prices">
+                    <span>P: R$ 39.90</span>
+                    <span>M: R$ 52.90</span>
+                    <span>G: R$ 66.90</span>
+                </div>
+                <div class="management-actions">
+                    <button class="management-edit-btn">Editar</button>
+                    <button class="management-disable-btn">Desabilitar</button>
+                    <a href="#"><img src="../img/Trash.png" class="management-delete-btn"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="management-pizza-card">
+            <img src="../img/pizzaPudim.png" class="management-pizza-img">
+            <div class="management-pizza-info">
+                <div class="management-title-line">
+                    <h2>Pudim</h2>
+                    <span class="management-tag">Doce</span>
+                </div>
+                <p class="management-description">
+                    Pudim
+                </p>
+                <div class="management-ingredients">
+                    <span>Pudim</span>
+                </div>
+                <div class="management-info-row">
+                    <span><img src="../img/Group.png"> 25min</span>
+                    <span><img src="../img/Star 1.png"> 5.0</span>
+                    <span><img src="../img/SVGRepo_iconCarrier.png"> 200 Vendas</span>
+                </div>
+                <div class="management-price-row">
+                    <span>Preço (Média): </span>
+                    <span class="price">R$ 59.90</span>
+                </div>
+                <div class="management-size-prices">
+                    <span>P: R$ 49.90</span>
+                    <span>M: R$ 59.90</span>
+                    <span>G: R$ 69.90</span>
+                </div>
+                <div class="management-actions">
+                    <button class="management-edit-btn">Editar</button>
+                    <button class="management-disable-btn">Desabilitar</button>
+                    <a href="#"><img src="../img/Trash.png" class="management-delete-btn"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
