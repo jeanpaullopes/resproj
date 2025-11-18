@@ -40,11 +40,18 @@ body {
 
 .main-sale {
     background-color: white;
-    padding: 6px 16px;
+    padding: 0;
     border-radius: 16px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     height: 140px;
-    width: 80vw;
+    width: 90vw;
+}
+
+.main-sale-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 .main-selector {
@@ -64,8 +71,38 @@ body {
     font-size: 14px;
 }
 
+.main-selector-pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+    color: gray;
+    font-size: 12px;
+    position: relative;
+}
+
+.main-selector-pages-nextpage {
+    position: absolute;
+    right: 32px;
+    font-size: 32px;
+    color: #FFD700;
+    text-shadow: 1px 1px 2px black;
+}
+
 .select {
     background-color: white;
+    padding: 6px 12px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.select a {
+    text-decoration: none;
+    color: black;
+}
+
+.selected {
+    background-color: #FFD700;
     padding: 6px 12px;
     border-radius: 16px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -78,12 +115,94 @@ body {
     gap: 12px;
 }
 
+.main-selector-pizza-order {
+    margin: 32px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .pizza {
     background-color: white;
     padding: 6px 16px;
     border-radius: 16px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.pizza-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 65%;
+}
+
+.pizza-more {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    font-size: 12px;
+    color: gray;
+}
+
+.pizza-info-more {
+    color: gray;
+}
+
+.pizza-info-size-rating {
+    color: gray;
+}
+
+.pizza-order {
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    gap: 24px;
+    padding: 16px;
+}
+
+.pizza-order-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pizza-order-more-options {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.pizza-order-more-options-rate{
+    color: #FFD700;
+    text-shadow: 1px 1px 1px black;
+}
+
+.pizza-order-title {
+    font-size: 22px;
+}
+
+.pizza-order-subtitle {
+    color: gray;
+}
+
+.pizza-order-price {
+    position: absolute;
+    top: 6%;
+    right: 6%;
+    font-size: 20px;
 }
 
 .main-profile-card {
