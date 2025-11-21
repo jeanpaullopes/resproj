@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>resproj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      background-color: rgb(43, 42, 42);
+      color: rgb(235, 17, 17);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 25;
+    }
+
+    main {
+      text-align: left;
+      padding: 20px;
+      padding-bottom: 120px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: white;
+      color: rgb(44, 43, 43);
+      font-size: 20px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffd700;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 21px -35px;
+      box-shadow: 0 -3px 8px rgba(0,0,0,0.3);
+      gap: 55px;
+    }
+
+    .footer-button {
+      flex: 1;
+      max-width: 120px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .save {
+      background-color: rgb(12, 189, 12);
+    }
+
+    .cancel {
+      background-color: rgb(185, 53, 53);
+    }
+
+    .total {
+      flex: 1;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      color: black;
+    }
+
+    .selection-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 15px;
+    }
+
+    .selection-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffd700;
+      color: rgb(221, 26, 26);
+      border: none;
+      border-radius: 11px;
+      padding: 10px 15px;
+      font-size: 20px;
+      font-weight: 600;
+      width: 95%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .selection-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .selection-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .remove-btn {
+      background: rgb(189, 53, 53);
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .remove-btn:hover {
+      background: rgb(150, 30, 30);
+      transform: scale(1.1);
+    }
+
+    .header-icon {
+  color: rgb(255, 47, 47);
+  font-size: 36px; 
+  text-decoration: none;
+  margin-top: 25px;
+  line-height: 1; 
+}
+
+.hidden-item {
+    display: none !important;
+}
+
+.show-all-items .selection-item {
+    display: flex !important;
+}
+
+
+  </style>
+</head>
+
+<body>
+<body>
+<header>
+
+  <div class="header-background">
+
+   
+
+    <a href="file:///C:/Users/Gabri/Desktop/Pastas/A3-2025-2/resproj/reservations.html"
+
+       class="header-icon" >
+
+      ⭠
+
+    </a>
+
+   
+
+    <div class="header-up"style="position: relative; top: 35px; left: -10px; color: rgb(255, 47, 47); font-size: 21px;">Mesa 1</div>
+
+   
+
+    <div class="header-icon" style="position: relative; top: 10px; left: -2px;  color: rgb(255, 47, 47); font-size: 21px;">☰</div>
+
+   
+
+  </div>
+
+</header>
+
+<main>
+    <label for="cliente">Nome do Cliente:</label>
+    <input type="text" id="cliente" placeholder="Adicione um Nome">
+
+    <label for="pizza">Pizza:</label>
+    <input type="text" id="pizza" placeholder="Adicione uma Pizza">
+
+    <div class="selection-container" id="selection-pizza">
+      <div class="selection-item" data-id="pizza-calabresa">
+        <div class="selection-info">
+          <img src="imgPizzaCalabresa.png" alt="Pizza Calabresa">
+          Calabresa
+        </div>
+        <button class="remove-btn" data-id="pizza-calabresa">×</button>
+      </div>
+
+      <div class="selection-item" data-id="pizza-marguerita">
+        <div class="selection-info">
+          <img src="./imgPizzaMarguerita.png" alt="Pizza Marguerita">
+          Marguerita
+        </div>
+        <button class="remove-btn" data-id="pizza-marguerita">×</button>
+      </div>
+      
+      <div class="selection-item" data-id="pizza-pudim">
+        <div class="selection-info">
+          <img src="./imgPizzaPudim.png" alt="Pizza Pudim">
+          Pudim
+        </div>
+        <button class="remove-btn" data-id="pizza-pudim">×</button>
+      </div>
+    </div> 
+    <label for="bebida">Bebida:</label>
+    <input type="text" id="bebida" placeholder="Adicione uma Bebida">
+
+    <div class="selection-container" id="selection-bebida">
+      <div class="selection-item" data-id="bebida-coca-zero">
+        <div class="selection-info">
+          <img src="./imgCocaZero.jpg" alt="Coca-Cola Zero">
+          Coca-Cola Zero 350ml
+        </div>
+        <button class="remove-btn" data-id="bebida-coca-zero">×</button>
+      </div>
+      
+      <div class="selection-item" data-id="bebida-coca-normal">
+        <div class="selection-info">
+          <img src="./imgCocaNormal.jpeg" alt="Coca-Cola Normal">
+          Coca-Cola 350ml
+        </div>
+        <button class="remove-btn" data-id="bebida-coca-normal">×</button>
+      </div>
+
+      <div class="selection-item" data-id="bebida-guarana">
+        <div class="selection-info">
+          <img src="./imgGuaranaAntartica.jpg" alt="Guaraná">
+          Guaraná 350ml
+        </div>
+        <button class="remove-btn" data-id="bebida-guarana">×</button>
+      </div>
+    </div>
+    <label for="obs">Observações:</label>
+    <input id="obs" placeholder="Adicione uma Observação">
+</main>
+
+<footer>
+    <button class="footer-button save">Salvar</button>
+    <div class="total">Total: R$ 109,80</div>
+    <button class="footer-button cancel">Cancelar</button>
+</footer>
+
+<script>
+
+    const inputPizza = document.getElementById('pizza');
+    const inputBebida = document.getElementById('bebida');
+    const containerPizza = document.getElementById('selection-pizza');
+    const containerBebida = document.getElementById('selection-bebida');
+
+    const inputCliente = document.getElementById('cliente');
+    const inputObs = document.getElementById('obs'); 
+    const botaoSalvar = document.querySelector('.save');
+    
+    const keyNome = 'nomeClienteMesa1'; 
+    const keyObs = 'obsMesa1';
+    const keyRemovidos = 'itensRemovidosMesa1'; 
+
+    const todosBotoesRemover = document.querySelectorAll('.remove-btn');
+    const todosItens = document.querySelectorAll('.selection-item');
+
+ 
+    function carregarDados() {
+        const nomeSalvo = localStorage.getItem(keyNome);
+        if (nomeSalvo) inputCliente.value = nomeSalvo;
+
+        const obsSalva = localStorage.getItem(keyObs);
+        if (obsSalva) inputObs.value = obsSalva;
+
+
+        const listaRemovidos = JSON.parse(localStorage.getItem(keyRemovidos) || '[]');
+        
+        todosItens.forEach(item => {
+            const itemId = item.dataset.id;
+            if (listaRemovidos.includes(itemId)) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'flex'; 
+            }
+        });
+    }
+
+    function salvarItensRemovidos() {
+        const itensRemovidosAtuais = [];
+        
+        
+        todosItens.forEach(item => {
+            if (item.style.display === 'none') {
+                itensRemovidosAtuais.push(item.dataset.id);
+            }
+        });
+
+        localStorage.setItem(keyRemovidos, JSON.stringify(itensRemovidosAtuais));
+    }
+
+
+
+    todosBotoesRemover.forEach(botao => {
+        botao.addEventListener('click', function() {
+            const itemId = this.dataset.id;
+            const itemElement = this.closest('.selection-item'); // Pega o div pai do item
+
+            itemElement.style.display = 'none';
+            
+
+            salvarItensRemovidos();
+        });
+    });
+
+
+    botaoSalvar.addEventListener('click', function() {
+
+        const nomeAtual = inputCliente.value.trim();
+        const obsAtual = inputObs.value.trim();
+        
+        if (nomeAtual !== '') {
+            localStorage.setItem(keyNome, nomeAtual);
+        } else {
+            localStorage.removeItem(keyNome);
+        }
+
+        if (obsAtual !== '') {
+            localStorage.setItem(keyObs, obsAtual);
+        } else {
+            localStorage.removeItem(keyObs);
+        }
+
+        salvarItensRemovidos();
+        
+        alert('Dados (Nome, Observações e Itens) salvos com sucesso!');
+    });
+
+    carregarDados();
+
+    const botaoCancelar = document.querySelector('.cancel');
+
+    botaoCancelar.addEventListener('click', function() {
+        localStorage.removeItem(keyRemovidos); 
+        
+        todosItens.forEach(item => {
+            item.style.display = 'flex';
+        });
+
+        alert('Seleção de itens restaurada! Clique em "Salvar" para confirmar.');
+    });
+
+function toggleSuggestions(container) {
+    container.classList.toggle('show-all-items');
+}
+
+inputPizza.addEventListener('click', () => {
+    toggleSuggestions(containerPizza);
+});
+
+inputBebida.addEventListener('click', () => {
+    toggleSuggestions(containerBebida);
+});
+
+todosBotoesRemover.forEach(botao => {
+    botao.addEventListener('click', function() {
+        const itemElement = this.closest('.selection-item');
+        
+        if(itemElement.style.display === 'flex' || itemElement.style.display === '') {
+            itemElement.style.display = 'none'; 
+        } else {
+            itemElement.style.display = 'flex'; 
+        }
+
+        salvarItensRemovidos();
+    });
+});
+
+</script>
+
+</body>
+</html>
