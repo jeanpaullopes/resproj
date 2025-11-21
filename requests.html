@@ -135,70 +135,257 @@
       background: rgb(150, 30, 30);
       transform: scale(1.1);
     }
+
+    .header-icon {
+  color: rgb(255, 47, 47);
+  font-size: 36px; 
+  text-decoration: none;
+  margin-top: 25px;
+  line-height: 1; 
+}
+
+.hidden-item {
+    display: none !important;
+}
+
+.show-all-items .selection-item {
+    display: flex !important;
+}
+
+
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="header-background">
-      <div class="header-left" style="position: relative; top: 9px; color: rgb(255, 47, 47); font-size: 36px;">⭠</div>
-      <div class="header-up" style="position: relative; top: 35px; color: rgb(255, 47, 47); font-size: 21px;">Mesa 1</div>
-      <div class="header-right" style="position: relative; top: 9px; color: rgb(255, 47, 47); font-size: 21px;">☰</div>
-    </div>    
-  </header>   
+<body>
+<header>
 
-  <main>
+  <div class="header-background">
+
+   
+
+    <a href="file:///C:/Users/Gabri/Desktop/Pastas/A3-2025-2/resproj/reservations.html"
+
+       class="header-icon" >
+
+      ⭠
+
+    </a>
+
+   
+
+    <div class="header-up"style="position: relative; top: 35px; left: -10px; color: rgb(255, 47, 47); font-size: 21px;">Mesa 1</div>
+
+   
+
+    <div class="header-icon" style="position: relative; top: 10px; left: -2px;  color: rgb(255, 47, 47); font-size: 21px;">☰</div>
+
+   
+
+  </div>
+
+</header>
+
+<main>
     <label for="cliente">Nome do Cliente:</label>
     <input type="text" id="cliente" placeholder="Adicione um Nome">
 
     <label for="pizza">Pizza:</label>
     <input type="text" id="pizza" placeholder="Adicione uma Pizza">
 
-    <div class="selection-container">
-      <div class="selection-item">
+    <div class="selection-container" id="selection-pizza">
+      <div class="selection-item" data-id="pizza-calabresa">
         <div class="selection-info">
-          <img src="./pizzaCalabresa.png" alt="Pizza Calabresa">
+          <img src="imgPizzaCalabresa.png" alt="Pizza Calabresa">
           Calabresa
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="pizza-calabresa">×</button>
       </div>
-      <div class="selection-item">
+
+      <div class="selection-item" data-id="pizza-marguerita">
         <div class="selection-info">
-          <img src="./pizzaMarguerita.png" alt="Pizza Marguerita">
+          <img src="./imgPizzaMarguerita.png" alt="Pizza Marguerita">
           Marguerita
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="pizza-marguerita">×</button>
       </div>
-    </div>
-
+      
+      <div class="selection-item" data-id="pizza-pudim">
+        <div class="selection-info">
+          <img src="./imgPizzaPudim.png" alt="Pizza Pudim">
+          Pudim
+        </div>
+        <button class="remove-btn" data-id="pizza-pudim">×</button>
+      </div>
+    </div> 
     <label for="bebida">Bebida:</label>
     <input type="text" id="bebida" placeholder="Adicione uma Bebida">
 
-    <div class="selection-container">
-      <div class="selection-item">
+    <div class="selection-container" id="selection-bebida">
+      <div class="selection-item" data-id="bebida-coca-zero">
         <div class="selection-info">
-          <img src="./55573.png" alt="Coca-Cola Zero">
+          <img src="./imgCocaZero.jpg" alt="Coca-Cola Zero">
           Coca-Cola Zero 350ml
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="bebida-coca-zero">×</button>
       </div>
-      <div class="selection-item">
+      
+      <div class="selection-item" data-id="bebida-coca-normal">
         <div class="selection-info">
-          <img src="./14530.png" alt="Guaraná">
+          <img src="./imgCocaNormal.jpeg" alt="Coca-Cola Normal">
+          Coca-Cola 350ml
+        </div>
+        <button class="remove-btn" data-id="bebida-coca-normal">×</button>
+      </div>
+
+      <div class="selection-item" data-id="bebida-guarana">
+        <div class="selection-info">
+          <img src="./imgGuaranaAntartica.jpg" alt="Guaraná">
           Guaraná 350ml
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="bebida-guarana">×</button>
       </div>
     </div>
-
     <label for="obs">Observações:</label>
     <input id="obs" placeholder="Adicione uma Observação">
-  </main>
+</main>
 
-  <footer>
+<footer>
     <button class="footer-button save">Salvar</button>
     <div class="total">Total: R$ 109,80</div>
     <button class="footer-button cancel">Cancelar</button>
-  </footer>
+</footer>
+
+<script>
+
+    const inputPizza = document.getElementById('pizza');
+    const inputBebida = document.getElementById('bebida');
+    const containerPizza = document.getElementById('selection-pizza');
+    const containerBebida = document.getElementById('selection-bebida');
+
+    const inputCliente = document.getElementById('cliente');
+    const inputObs = document.getElementById('obs'); 
+    const botaoSalvar = document.querySelector('.save');
+    
+    const keyNome = 'nomeClienteMesa1'; 
+    const keyObs = 'obsMesa1';
+    const keyRemovidos = 'itensRemovidosMesa1'; 
+
+    const todosBotoesRemover = document.querySelectorAll('.remove-btn');
+    const todosItens = document.querySelectorAll('.selection-item');
+
+ 
+    function carregarDados() {
+        const nomeSalvo = localStorage.getItem(keyNome);
+        if (nomeSalvo) inputCliente.value = nomeSalvo;
+
+        const obsSalva = localStorage.getItem(keyObs);
+        if (obsSalva) inputObs.value = obsSalva;
+
+
+        const listaRemovidos = JSON.parse(localStorage.getItem(keyRemovidos) || '[]');
+        
+        todosItens.forEach(item => {
+            const itemId = item.dataset.id;
+            if (listaRemovidos.includes(itemId)) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'flex'; 
+            }
+        });
+    }
+
+    function salvarItensRemovidos() {
+        const itensRemovidosAtuais = [];
+        
+        
+        todosItens.forEach(item => {
+            if (item.style.display === 'none') {
+                itensRemovidosAtuais.push(item.dataset.id);
+            }
+        });
+
+        localStorage.setItem(keyRemovidos, JSON.stringify(itensRemovidosAtuais));
+    }
+
+
+
+    todosBotoesRemover.forEach(botao => {
+        botao.addEventListener('click', function() {
+            const itemId = this.dataset.id;
+            const itemElement = this.closest('.selection-item'); // Pega o div pai do item
+
+            itemElement.style.display = 'none';
+            
+
+            salvarItensRemovidos();
+        });
+    });
+
+
+    botaoSalvar.addEventListener('click', function() {
+
+        const nomeAtual = inputCliente.value.trim();
+        const obsAtual = inputObs.value.trim();
+        
+        if (nomeAtual !== '') {
+            localStorage.setItem(keyNome, nomeAtual);
+        } else {
+            localStorage.removeItem(keyNome);
+        }
+
+        if (obsAtual !== '') {
+            localStorage.setItem(keyObs, obsAtual);
+        } else {
+            localStorage.removeItem(keyObs);
+        }
+
+        salvarItensRemovidos();
+        
+        alert('Dados (Nome, Observações e Itens) salvos com sucesso!');
+    });
+
+    carregarDados();
+
+    const botaoCancelar = document.querySelector('.cancel');
+
+    botaoCancelar.addEventListener('click', function() {
+        localStorage.removeItem(keyRemovidos); 
+        
+        todosItens.forEach(item => {
+            item.style.display = 'flex';
+        });
+
+        alert('Seleção de itens restaurada! Clique em "Salvar" para confirmar.');
+    });
+
+function toggleSuggestions(container) {
+    container.classList.toggle('show-all-items');
+}
+
+inputPizza.addEventListener('click', () => {
+    toggleSuggestions(containerPizza);
+});
+
+inputBebida.addEventListener('click', () => {
+    toggleSuggestions(containerBebida);
+});
+
+todosBotoesRemover.forEach(botao => {
+    botao.addEventListener('click', function() {
+        const itemElement = this.closest('.selection-item');
+        
+        if(itemElement.style.display === 'flex' || itemElement.style.display === '') {
+            itemElement.style.display = 'none'; 
+        } else {
+            itemElement.style.display = 'flex'; 
+        }
+
+        salvarItensRemovidos();
+    });
+});
+
+</script>
+
 </body>
 </html>
