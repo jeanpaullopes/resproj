@@ -1,41 +1,44 @@
 let filter = "";
 
-document.getElementById('filter-all').addEventListener('click', (event) => {
-    filter = "";
-    for (children of event.target.parentElement.children) {
-        children.className = "select";
-    }
-    event.target.className = "selected"
-    getMenuItens();
-});
+if (window.location.pathname == "/index.html") filter = "salgadas";
+else {
+    document.getElementById('filter-all').addEventListener('click', (event) => {
+        filter = "";
+        for (children of event.target.parentElement.children) {
+            children.className = "select";
+        }
+        event.target.className = "selected"
+        getMenuItens();
+    });
 
-document.getElementById('filter-salgadas').addEventListener('click', (event) => {
-    filter = "salgadas";
-    for (children of event.target.parentElement.children) {
-        children.className = "select";
-    }
-    event.target.className = "selected"
-    
-    getMenuItens();
-});
+    document.getElementById('filter-salgadas').addEventListener('click', (event) => {
+        filter = "salgadas";
+        for (children of event.target.parentElement.children) {
+            children.className = "select";
+        }
+        event.target.className = "selected"
+        
+        getMenuItens();
+    });
 
-document.getElementById('filter-doces').addEventListener('click', (event) => {
-    filter = "doces";
-    for (children of event.target.parentElement.children) {
-        children.className = "select";
-    }
-    event.target.className = "selected"
-    getMenuItens();
-});
+    document.getElementById('filter-doces').addEventListener('click', (event) => {
+        filter = "doces";
+        for (children of event.target.parentElement.children) {
+            children.className = "select";
+        }
+        event.target.className = "selected"
+        getMenuItens();
+    });
 
-document.getElementById('filter-bebidas').addEventListener('click', (event) => {
-    filter = "bebidas";
-    for (children of event.target.parentElement.children) {
-        children.className = "select";
-    }
-    event.target.className = "selected"
-    getMenuItens();
-});
+    document.getElementById('filter-bebidas').addEventListener('click', (event) => {
+        filter = "bebidas";
+        for (children of event.target.parentElement.children) {
+            children.className = "select";
+        }
+        event.target.className = "selected"
+        getMenuItens();
+    });
+}
 
 async function getMenuItens() {
     const res = await fetch('/json/menu.json');

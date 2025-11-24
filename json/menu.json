@@ -11,7 +11,7 @@
           "media": 50.00,
           "pequena": 35.00
         },
-        "imagem": "https://drive.google.com/uc?export=view&id=1Tf7Hz13hQKA4dQbwctZsyerxyVq1ufoW"
+        "imagem": "../assets/pizzas/pizzaMarguerita.png"
       },
       {
         "id": 2,
@@ -23,7 +23,7 @@
           "media": 48.00,
           "pequena": 33.00
         },
-        "imagem": "https://drive.google.com/uc?export=view&id=1yB9yohRlGq11aHcK0i0GjlxYpxkm92DD"
+        "imagem": "../assets/pizzas/pizzaCalabresa.png"
       },
       {
         "id": 3,
@@ -74,7 +74,7 @@
           "media": 65.00,
           "pequena": 45.00
         },
-        "imagem": "https://drive.google.com/uc?export=view&id=17WKbK26UwQOyZXR_XczCgyU0meGaRhwv"
+        "imagem": "../assets/pizzas/pizzaPudim.png"
       },
       {
         "id": 17,
@@ -141,7 +141,7 @@
         "tipo": "Refrigerante",
         "tamanho": "350ml",
         "preco": 7.00,
-        "imagem": "https://drive.google.com/uc?export=view&id=1Exoj4f4Fs8WBkQf0xVaXh64POYuL2xVZ"
+        "imagem": "../img/coca-zero.png"
       },
       {
         "id": 32,
@@ -149,7 +149,7 @@
         "tipo": "Refrigerante",
         "tamanho": "350ml",
         "preco": 6.00,
-        "imagem": "https://drive.google.com/uc?export=view&id=1yJd8fqFVtSMmILkHpo-cZek_hMKIbE0I"
+        "imagem": "../img/guarana-antarctica.png"
       },
       {
         "id": 33,
