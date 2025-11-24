@@ -205,6 +205,19 @@ body {
     font-size: 20px;
 }
 
+.nutrition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nutrition span {
+    padding: 6px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
 .main-profile-card {
     width: 90vw;
     height: 90px;
@@ -633,3 +646,6 @@ body.management-page {
     width: 100%;
     background: transparent;
 }
+/* img {
+    height: 78px;
+} */
