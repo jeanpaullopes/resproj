@@ -20,6 +20,26 @@ body {
     pointer-events: auto;
 }
 
+.header-return {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: -26px;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.header-more {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: -60px;
+}
+
 .header-left,
 .header-center,
 .header-right {
@@ -298,6 +318,12 @@ body {
     margin: auto;
     text-decoration: none;
     color: black;
+}
+
+.footer-icons {
+    width: 46px;
+    height: 46px;
+    margin-top: 12px;
 }
 
 h1,
@@ -649,6 +675,18 @@ body.management-page {
 /* img {
     height: 78px;
 } */
+
+.moreOptions {
+    width: 50%;
+    gap: 60px;
+}
+
+.profileOptions {
+    width: 100%;
+    height:32px;
+    width: 32px;
+    gap: 13px;
+}
 
 .modal-backdrop-add-pizza,
 #confirm-removal-modal {
