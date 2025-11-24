@@ -1,0 +1,212 @@
+{
+  "menu": {
+    "pizzas_salgadas": [
+      {
+        "id": 1,
+        "nome": "Marguerita",
+        "tempo_preparo_min": 25,
+        "nota_estrelas": 4.5,
+        "precos": {
+          "grande": 70.00,
+          "media": 50.00,
+          "pequena": 35.00
+        },
+        "imagem": "../assets/pizzas/pizzaMarguerita.png"
+      },
+      {
+        "id": 2,
+        "nome": "Calabresa",
+        "tempo_preparo_min": 20,
+        "nota_estrelas": 4.2,
+        "precos": {
+          "grande": 65.00,
+          "media": 48.00,
+          "pequena": 33.00
+        },
+        "imagem": "../assets/pizzas/pizzaCalabresa.png"
+      },
+      {
+        "id": 3,
+        "nome": "Frango com Catupiry",
+        "tempo_preparo_min": 30,
+        "nota_estrelas": 4.7,
+        "precos": {
+          "grande": 78.00,
+          "media": 58.00,
+          "pequena": 40.00
+        },
+        "imagem": "https://media-cdn.tripadvisor.com/media/photo-s/11/eb/36/f1/brazilian-pizza-frango.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "Quatro Queijos",
+        "tempo_preparo_min": 28,
+        "nota_estrelas": 4.8,
+        "precos": {
+          "grande": 82.00,
+          "media": 60.00,
+          "pequena": 42.00
+        },
+        "imagem": "https://www.portalumami.com.br/app/uploads/2021/07/Pizza-4-queijos.jpg"
+      },
+      {
+        "id": 5,
+        "nome": "Portuguesa",
+        "tempo_preparo_min": 27,
+        "nota_estrelas": 4.4,
+        "precos": {
+          "grande": 75.00,
+          "media": 55.00,
+          "pequena": 38.00
+        },
+        "imagem": "https://receitasde.com.br/wp-content/uploads/2024/07/Pizza-Portuguesa.jpg"
+      }
+    ],
+
+    "pizzas_doces": [
+      {
+        "id": 16,
+        "nome": "Pudim",
+        "tempo_preparo_min": 30,
+        "nota_estrelas": 4.1,
+        "precos": {
+          "grande": 85.00,
+          "media": 65.00,
+          "pequena": 45.00
+        },
+        "imagem": "../assets/pizzas/pizzaPudim.png"
+      },
+      {
+        "id": 17,
+        "nome": "Prestígio",
+        "tempo_preparo_min": 25,
+        "nota_estrelas": 4.6,
+        "precos": {
+          "grande": 80.00,
+          "media": 60.00,
+          "pequena": 40.00
+        },
+        "imagem": "https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/braveromp/111_65e8f095ca92a.jpg"
+      },
+      {
+        "id": 18,
+        "nome": "Sensação",
+        "tempo_preparo_min": 35,
+        "nota_estrelas": 4.0,
+        "precos": {
+          "grande": 75.00,
+          "media": 55.00,
+          "pequena": 35.00
+        },
+        "imagem": "https://receitasdepesos.com.br/wp-content/uploads/2023/12/pizza-caseira-de-morango-com-chocolate-1.jpg"
+      },
+      {
+        "id": 19,
+        "nome": "Brigadeiro",
+        "tempo_preparo_min": 30,
+        "nota_estrelas": 4.3,
+        "precos": {
+          "grande": 75.00,
+          "media": 55.00,
+          "pequena": 35.00
+        },
+        "imagem": "https://blog.novasafra.com.br/wp-content/uploads/2016/01/pizza-de-brigadeiro-780x360.jpg"
+      },
+      {
+        "id": 20,
+        "nome": "Banana com Chocolate",
+        "tempo_preparo_min": 25,
+        "nota_estrelas": 3.9,
+        "precos": {
+          "grande": 75.00,
+          "media": 55.00,
+          "pequena": 35.00
+        },
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTVkdtf_rU6ZDJRZ3IOWhctbL5ByeHM73b4g&s"
+      }
+    ],
+
+    "bebidas": [
+      {
+        "id": 30,
+        "nome": "Coca-Cola",
+        "tipo": "Refrigerante",
+        "tamanho": "350ml",
+        "preco": 7.00,
+        "imagem": "https://cdn.dooca.store/149445/products/zzkwkuc268r8plq7syaaxcgsn6ljqarw98dy.png?v=1724757760&webp=0"
+      },
+      {
+        "id": 31,
+        "nome": "Coca-Cola Zero",
+        "tipo": "Refrigerante",
+        "tamanho": "350ml",
+        "preco": 7.00,
+        "imagem": "../img/coca-zero.png"
+      },
+      {
+        "id": 32,
+        "nome": "Guaraná Antarctica",
+        "tipo": "Refrigerante",
+        "tamanho": "350ml",
+        "preco": 6.00,
+        "imagem": "../img/guarana-antarctica.png"
+      },
+      {
+        "id": 33,
+        "nome": "Água com Gás",
+        "tipo": "Água",
+        "tamanho": "500ml",
+        "preco": 5.00,
+        "imagem": "https://carrefourbrfood.vtexassets.com/arquivos/ids/18904682/agua-mineral-com-gas-crystal-500ml-1.jpg"
+      },
+      {
+        "id": 34,
+        "nome": "Água sem Gás",
+        "tipo": "Água",
+        "tamanho": "500ml",
+        "preco": 5.00,
+        "imagem": "https://drogariamoderna.vtexassets.com/arquivos/ids/251997-800-auto?v=638151218022670000&width=800&height=auto&aspect=true"
+      },
+      {
+        "id": 35,
+        "nome": "Suco de Laranja",
+        "tipo": "Suco",
+        "tamanho": "500ml",
+        "preco": 9.00,
+        "imagem": "https://obahortifruti.vtexassets.com/arquivos/ids/10660742/Suco-De-Laranja-Sem-Casca-Oba-Bem-Querer-500ml.jpg"
+      },
+      {
+        "id": 36,
+        "nome": "Suco de Uva",
+        "tipo": "Suco",
+        "tamanho": "500ml",
+        "preco": 10.00,
+        "imagem": "https://www.vinhosevinhos.com/media/catalog/product/cache/f551083cd20de7ac8cf7d25adc91480d/g/a/garibaldi_suco_tinto_integral_500ml_copy.jpg"
+      },
+      {
+        "id": 37,
+        "nome": "Sprite",
+        "tipo": "Refrigerante",
+        "tamanho": "350ml",
+        "preco": 6.00,
+        "imagem": "https://andinacocacola.vtexassets.com/arquivos/ids/158586/Sprite-Original.jpg"
+      },
+      {
+        "id": 38,
+        "nome": "Água Tônica",
+        "tipo": "Refrigerante",
+        "tamanho": "350ml",
+        "preco": 6.00,
+        "imagem": "https://paulistaoatacadista.vtexassets.com/arquivos/ids/384619/AguaTonicaAntarcticaLata350ML1.jpg"
+      },
+      {
+        "id": 39,
+        "nome": "Chá Gelado",
+        "tipo": "Chá",
+        "tamanho": "300ml",
+        "preco": 8.00,
+        "imagem": "https://promofarma.vtexassets.com/arquivos/ids/166088/7891098040893.jpg"
+      }
+    ]
+  }
+}
