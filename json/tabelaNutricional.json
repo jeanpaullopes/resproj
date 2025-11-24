@@ -1,0 +1,117 @@
+{
+  "tabela_nutricional": {
+    "referencia_porcao": "1 fatia (aprox. 100g a 120g)",
+    "itens": [
+      {
+        "id_produto": 11,
+        "nome": "Calabresa",
+        "calorias_kcal": 298,
+        "carboidratos_g": 29,
+        "proteinas_g": 14,
+        "gorduras_totais_g": 13,
+        "sodio_mg": 680,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://drive.google.com/uc?export=view&id=1yB9yohRlGq11aHcK0i0GjlxYpxkm92DD"
+      },
+      {
+        "id_produto": 12,
+        "nome": "Frango com Catupiry",
+        "calorias_kcal": 320,
+        "carboidratos_g": 28,
+        "proteinas_g": 18,
+        "gorduras_totais_g": 15,
+        "sodio_mg": 590,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://media-cdn.tripadvisor.com/media/photo-s/11/eb/36/f1/brazilian-pizza-frango.jpg"
+      },
+      {
+        "id_produto": 13,
+        "nome": "Marguerita",
+        "calorias_kcal": 270,
+        "carboidratos_g": 27,
+        "proteinas_g": 12,
+        "gorduras_totais_g": 11,
+        "sodio_mg": 520,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://drive.google.com/uc?export=view&id=1Tf7Hz13hQKA4dQbwctZsyerxyVq1ufoW"
+      },
+      {
+        "id_produto": 14,
+        "nome": "Quatro Queijos",
+        "calorias_kcal": 350,
+        "carboidratos_g": 26,
+        "proteinas_g": 16,
+        "gorduras_totais_g": 20,
+        "sodio_mg": 710,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://www.portalumami.com.br/app/uploads/2021/07/Pizza-4-queijos.jpg"
+      },
+      {
+        "id_produto": 15,
+        "nome": "Portuguesa",
+        "calorias_kcal": 315,
+        "carboidratos_g": 30,
+        "proteinas_g": 15,
+        "gorduras_totais_g": 14,
+        "sodio_mg": 750,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite", "Ovo"],
+        "imagem": "https://receitasde.com.br/wp-content/uploads/2024/07/Pizza-Portuguesa.jpg"
+      },
+      {
+        "id_produto": 16,
+        "nome": "Pudim",
+        "calorias_kcal": 340,
+        "carboidratos_g": 45,
+        "proteinas_g": 8,
+        "gorduras_totais_g": 12,
+        "sodio_mg": 180,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite", "Ovo"],
+        "imagem": "https://drive.google.com/uc?export=view&id=17WKbK26UwQOyZXR_XczCgyU0meGaRhwv"
+      },
+      {
+        "id_produto": 17,
+        "nome": "Prestígio",
+        "calorias_kcal": 380,
+        "carboidratos_g": 48,
+        "proteinas_g": 7,
+        "gorduras_totais_g": 18,
+        "sodio_mg": 140,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/braveromp/111_65e8f095ca92a.jpg"
+      },
+      {
+        "id_produto": 18,
+        "nome": "Sensação",
+        "calorias_kcal": 360,
+        "carboidratos_g": 46,
+        "proteinas_g": 6,
+        "gorduras_totais_g": 16,
+        "sodio_mg": 130,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://receitasdepesos.com.br/wp-content/uploads/2023/12/pizza-caseira-de-morango-com-chocolate-1.jpg"
+      },
+      {
+        "id_produto": 19,
+        "nome": "Brigadeiro",
+        "calorias_kcal": 390,
+        "carboidratos_g": 52,
+        "proteinas_g": 8,
+        "gorduras_totais_g": 17,
+        "sodio_mg": 150,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://blog.novasafra.com.br/wp-content/uploads/2016/01/pizza-de-brigadeiro-780x360.jpg"
+      },
+      {
+        "id_produto": 20,
+        "nome": "Banana com Chocolate",
+        "calorias_kcal": 330,
+        "carboidratos_g": 42,
+        "proteinas_g": 6,
+        "gorduras_totais_g": 14,
+        "sodio_mg": 120,
+        "ingredientes_alergenos": ["Glúten", "Derivados de Leite"],
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTVkdtf_rU6ZDJRZ3IOWhctbL5ByeHM73b4g&s"
+      }
+    ]
+  }
+}
