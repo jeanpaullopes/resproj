@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Nova Pizza</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <div class="modal-backdrop-add-pizza" id="adicionarPizzaModal"> 
+        <div class="modal-content-form">
+            
+            <header class="modal-header">
+                <h1>Adicionar Nova Pizza</h1>
+                <button class="close-btn" aria-label="Fechar">&times;</button>
+            </header>
+
+            <form action="/adicionar-pizza" method="POST">
+                
+                <fieldset>
+                    <legend>Informações Básicas</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome-sabor">Nome do Sabor *</label>
+                        <input type="text" id="nome-sabor" name="nome_sabor" placeholder="Ex: Calabresa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" name="descricao" rows="3" placeholder="Ingredientes e detalhes da pizza"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="categoria">Categoria de Pizza</label>
+                            <select id="categoria" name="categoria">
+                                <option value="">Selecione um tipo</option>
+                                <option value="tradicional">Tradicional</option>
+                                <option value="especial">Especial</option>
+                                <option value="vegetariana">Vegetariana</option>
+                                <option value="doce">Doce</option>
+                                <option value="da_casa">Da Casa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group half-width switch-container">
+                            <label for="disponivel">Disponível para vendas</label>
+                            <input type="checkbox" id="disponivel" name="disponivel" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ingredientes</legend>
+                    <div class="form-group">
+                        <label for="ingredientes">Lista de Ingredientes</label>
+                        <input type="text" id="ingredientes" name="ingredientes" 
+                                placeholder="Calabresa, Cebola, Azeitona, Mussarela (separados por vírgula)">
+                        <small>Separe os ingredientes por vírgula</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preços e Tamanhos (R$)</legend>
+                    <div class="form-row price-group">
+                        <div class="form-group third-width">
+                            <label for="preco-pequena">Pequena (R$)</label>
+                            <input type="number" id="preco-pequena" name="preco_pequena" value="32.90" step="0.01">
+                        </div>
+
+                        <div class="form-group third-width">
+                            <label for="preco-media">Média (R$)*</label>
+                            <input type="number" id="preco-media" name="preco_media" value="42.90" step="0.01" required>
+                        </div>
+
+                        <div class="form-group third-width">
+                            <label for="preco-grande">Grande (R$)</label>
+                            <input type="number" id="preco-grande" name="preco_grande" value="54.90" step="0.01">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="desconto">Desconto (%)</label>
+                            <input type="number" id="desconto" name="desconto" value="25" min="0" max="100">
+                        </div>
+                        
+                        <div class="form-group half-width">
+                            <label for="tempo-preparo">Tempo de Preparo</label>
+                            <input type="text" id="tempo-preparo" name="tempo_preparo" placeholder="35min">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="url-imagem">URL da Imagem</label>
+                            <input type="url" id="url-imagem" name="url_imagem" placeholder="https://...">
+                        </div>
+                        
+                        <div class="form-group half-width">
+                            <label for="avaliacao">Avaliação (0-5)</label>
+                            <input type="number" id="avaliacao" name="avaliacao" value="4.5" step="0.1" min="0" max="5">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-cancel"> Cancelar</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="icon-add"></i> Adicionar ao cardápio
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirm-removal-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content small-dialog"> 
+            <header class="modal-header">
+                <h2>Confirmar Exclusão</h2>
+            </header>
+            
+            <div class="modal-body">
+                <p>Tem certeza que deseja remover esta pizza do cardápio?</p>
+                <p><strong>Esta ação não pode ser desfeita.</strong></p>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn btn-cancel-modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-perigo">
+                    Remover
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
