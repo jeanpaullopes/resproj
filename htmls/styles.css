@@ -649,3 +649,167 @@ body.management-page {
 /* img {
     height: 78px;
 } */
+
+.modal-backdrop-add-pizza,
+#confirm-removal-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; 
+}
+
+#confirm-removal-modal {
+    display: none; 
+}
+
+.modal-content-form {
+    background-color: #FFD700; 
+    width: 90%;
+    max-width: 450px; 
+    height: 90vh; 
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; 
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-content-form h1 {
+    font-size: 22px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-top: 2px;
+    background-color: white; 
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.half-width {
+    flex: 1; 
+}
+
+.third-width {
+    flex: 1 1 30%; 
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #FF4500; 
+    color: white;
+}
+
+.btn-cancel,
+.btn-cancel-modal {
+    background-color: #eee;
+    color: #333;
+}
+
+.btn-perigo {
+    background-color: #DC3545; 
+    color: white;
+}
+
+
+.modal-content.small-dialog {
+    background-color: white;
+    width: 80%;
+    max-width: 350px; 
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 15px 0;
+}
+
+.modal-body h3 {
+    margin-bottom: 10px;
+}
+
+.modal-body p {
+    font-size: 14px;
+    color: #555;
+}
+
+.small-dialog .modal-actions {
+    justify-content: space-evenly;
+}
