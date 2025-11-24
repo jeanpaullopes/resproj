@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resproj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Tinos', serif;
+            padding-top: 72px;
+            padding-bottom: 72px;
+            background: white;
+            font-size: 19px;
+            font-weight: 1;
+
+        }
+
+        .header-background {
+            background-color: #FFD700;
+            width: 100%;
+            height: 72px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-left,
+        .header-right {
+            margin: auto;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -315px; 
+            width: 260px;
+            height: 100%;
+            background: black; 
+            color: white;
+            box-shadow: -3px 0 8px rgba(0,0,0,0.25);
+            transition: 0.3s ease;
+            padding: 20px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sidebar.open {
+            right: 0; 
+        }
+
+        .sidebar h2 {
+            margin: 0;
+            font-size: 22px;
+            color: white;
+        }
+
+        .sidebar a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .sidebar a:hover {
+            color: rgb(255, 47, 47);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 72px;
+            background: #FFD700;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    
+    <div class="sidebar" id="sidebar">
+        <br>
+        <h1 style="font-size: 34px; color: #ffd700;">Pizzaria dos Guri</h1>
+        <a href="reservations.html">Fazer uma Reserva</a>
+        <a href="promotions.html">Ver Promoções</a>
+        <a href="homepage.html">Pedir um Delivery</a>
+        <a href="trackorder.html">Acompanhar Pedido</a>
+        <a href="homepage.html">Trabalhe Conosco</a>
+    </div>
+
+    <header>
+        <div class="header-background">
+            <div class="header-left" style="position: relative; top: 9px; left: -2px; color: rgb(255, 47, 47); font-size: 36px;">⭠</div>
+            <img src="./imgIconeDoApp.jpeg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-top: 22px;">
+            <div class="header-right" id="openMenu" style="position: relative; top: 9px; left: -2px; color: rgb(255, 47, 47); font-size: 21px; cursor: pointer;">☰</div>
+        </div>
+    </header>   
+
+    <main style="
+        background-image: url('./imgFotoDeFundo.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px 0;
+    ">
+
+<div class="main-selector">            
+    <div class="main-selector-title" 
+         style="color: #ffd700; 
+                font-size: 22px; 
+                display: flex; 
+                gap: 83px; 
+                align-items: center; 
+                justify-content: center;">
+        
+        <h5 style="margin: 0;">Início</h5> 
+        <h5 style="margin: 0;">Cardápios</h5>        
+        <h5 style="margin: 0;">Cupons</h5> 
+    </div>
+</div>
+
+
+
+<div class="main-selector">            
+    <div class="main-selector-title" 
+         style="color: #ffd700; 
+                font-size: 18px; 
+                display: flex;
+                flex-direction: column;
+                gap: 10px; 
+                align-items: center; 
+                justify-content: center;">
+        
+        <br>
+        <h1 style="margin: 0;">Bem Vindo</h1> 
+        <h1 style="margin: 0;">À</h1>        
+        <h1 style="margin: 0;">Pizzaria dos Guri</h1>
+        <p style="margin: 0;"> A Pizza perfeita não exist...</p>
+        <h3 style="margin: 0;">PROMOÇÃO DO DIA:</h3>
+        <h3 style="margin: 0;">Pizza de Pudim:</h3>
+
+        <img src="imgPizzaPudim.png"
+       style="width: 150px; height: 150px; top: 400px; right: 2; border-radius: 5px;">
+           <p style="margin: 0;"> 25% de Desconto</p>
+
+    </div>
+
+       <p style="color: #FFd700;"> Nos siga nas redes sociais:</p>
+
+<div style="
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    margin-top: 15px;
+">
+
+    <div style="display: flex; gap: 10px;">
+        <img src="./imgIconeUsuario.png" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeNotificacao.png" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeConfiguracoes.png" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeMensagem.png" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeTelefone.png" style="width: 25px; height: 25px; object-fit: cover;">
+    </div>
+
+    <div style="display: flex; gap: 10px;">
+        <img src="./imgIconeX.png" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeIsta.jpeg" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeYoutube.jpeg" style="width: 25px; height: 25px; object-fit: cover;">
+        <img src="./imgIconeLinke.png" style="width: 25px; height: 25px; object-fit: cover;">
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-background"></div>
+    </footer>
+
+    <script>
+        const openMenu = document.getElementById("openMenu");
+        const sidebar = document.getElementById("sidebar");
+
+        openMenu.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>
