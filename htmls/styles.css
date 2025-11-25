@@ -874,3 +874,31 @@ textarea {
 .small-dialog .modal-actions {
     justify-content: space-evenly;
 }
+
+.avaliacao-popup {
+    display: none;
+}
+
+.avaliacao-popup.activated {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: 1px 1px 6px black;
+    border-radius: 8px;
+    background-color: white;
+    position: fixed;
+    top: 25%;
+    left: 11%;
+    height: 45vh;
+    width: 70vw;
+    z-index: 9999;
+    padding: 16px;
+}
+
+.avaliacao-popup-close {
+    font-size: 32px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
