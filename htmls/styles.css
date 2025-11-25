@@ -883,7 +883,6 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
     box-shadow: 1px 1px 6px black;
     border-radius: 8px;
     background-color: white;
@@ -899,6 +898,20 @@ textarea {
 .avaliacao-popup-close {
     font-size: 32px;
     position: absolute;
+    border: none;
+    background-color: transparent;
     top: 16px;
     left: 16px;
+}
+
+.avaliacao-popup-send {
+    font-size: 24px;
+    position: absolute;
+    padding: 8px 32px;
+    border-radius: 32px;
+    border: none;
+    box-shadow: 1px 1px 4px black;
+    background-color: #FFD700;
+    bottom: 16px;
+    right: 16px;
 }
