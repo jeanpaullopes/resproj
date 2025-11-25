@@ -181,7 +181,7 @@
         "tipo": "Suco",
         "tamanho": "500ml",
         "preco": 10.00,
-        "imagem": "https://www.vinhosevinhos.com/media/catalog/product/cache/f551083cd20de7ac8cf7d25adc91480d/g/a/garibaldi_suco_tinto_integral_500ml_copy.jpg"
+        "imagem": "../assets/pizzas/sucoUva.jpg"
       },
       {
         "id": 37,
