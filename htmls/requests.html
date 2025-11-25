@@ -135,70 +135,140 @@
       background: rgb(150, 30, 30);
       transform: scale(1.1);
     }
+
+    .header-icon {
+  color: rgb(255, 47, 47);
+  font-size: 36px; 
+  text-decoration: none;
+  margin-top: 25px;
+  line-height: 1; 
+}
+
+.hidden-item {
+    display: none !important;
+}
+
+.show-all-items .selection-item {
+    display: flex !important;
+}
+
+
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="header-background">
-      <div class="header-left" style="position: relative; top: 9px; color: rgb(255, 47, 47); font-size: 36px;">⭠</div>
-      <div class="header-up" style="position: relative; top: 35px; color: rgb(255, 47, 47); font-size: 21px;">Mesa 1</div>
-      <div class="header-right" style="position: relative; top: 9px; color: rgb(255, 47, 47); font-size: 21px;">☰</div>
-    </div>    
-  </header>   
+<body>
+<header>
 
-  <main>
+  <div class="header-background">
+
+    <a href="reservations.html"
+
+       class="header-icon" >
+
+      ⭠
+
+    </a>
+
+    <div class="header-up"style="position: relative; top: 35px; left: -10px; color: rgb(255, 47, 47); font-size: 21px;">Mesa 1</div>
+
+    <div class="header-icon" style="position: relative; top: 10px; left: -2px;  color: rgb(255, 47, 47); font-size: 21px;">☰</div>
+
+   
+
+  </div>
+
+</header>
+
+<main>
     <label for="cliente">Nome do Cliente:</label>
     <input type="text" id="cliente" placeholder="Adicione um Nome">
 
     <label for="pizza">Pizza:</label>
-    <input type="text" id="pizza" placeholder="Adicione uma Pizza">
+    <input type="text" id="pizza" placeholder="Adicione uma Pizza" readonly>
 
-    <div class="selection-container">
-      <div class="selection-item">
+    <div class="selection-container" id="selection-pizza">
+      <div class="selection-item" data-id="pizza-calabresa">
         <div class="selection-info">
-          <img src="./pizzaCalabresa.png" alt="Pizza Calabresa">
+          <img src="../assets/homepage/imgPizzaCalabresa.png" alt="Pizza Calabresa">
           Calabresa
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="pizza-calabresa">×</button>
       </div>
-      <div class="selection-item">
+
+      <div class="selection-item" data-id="pizza-marguerita">
         <div class="selection-info">
-          <img src="./pizzaMarguerita.png" alt="Pizza Marguerita">
+          <img src="../assets/homepage/imgPizzaMarguerita.png" alt="Pizza Marguerita">
           Marguerita
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="pizza-marguerita">×</button>
       </div>
-    </div>
-
-    <label for="bebida">Bebida:</label>
-    <input type="text" id="bebida" placeholder="Adicione uma Bebida">
-
-    <div class="selection-container">
-      <div class="selection-item">
+      
+      <div class="selection-item" data-id="pizza-pudim">
         <div class="selection-info">
-          <img src="./55573.png" alt="Coca-Cola Zero">
+          <img src="../assets/homepage/imgPizzaPudim.png" alt="Pizza Pudim">
+          Pudim
+        </div>
+        <button class="remove-btn" data-id="pizza-pudim">×</button>
+      </div>
+      
+    </div> 
+    <label for="bebida">Bebida:</label>
+    <input type="text" id="bebida" placeholder="Adicione uma Bebida" readonly>
+
+    <div class="selection-container" id="selection-bebida">
+      <div class="selection-item" data-id="bebida-coca-zero">
+        <div class="selection-info">
+          <img src="../assets/homepage/imgCocaZero.jpg" alt="Coca-Cola Zero">
           Coca-Cola Zero 350ml
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="bebida-coca-zero">×</button>
       </div>
-      <div class="selection-item">
+      
+      <div class="selection-item" data-id="bebida-coca-normal">
         <div class="selection-info">
-          <img src="./14530.png" alt="Guaraná">
+          <img src="../assets/homepage/imgCocaNormal.jpeg" alt="Coca-Cola Normal">
+          Coca-Cola 350ml
+        </div>
+        <button class="remove-btn" data-id="bebida-coca-normal">×</button>
+      </div>
+
+      <div class="selection-item" data-id="bebida-guarana">
+        <div class="selection-info">
+          <img src="../assets/homepage/imgGuaranaAntartica.jpg" alt="Guaraná">
           Guaraná 350ml
         </div>
-        <button class="remove-btn">×</button>
+        <button class="remove-btn" data-id="bebida-guarana">×</button>
       </div>
     </div>
-
     <label for="obs">Observações:</label>
     <input id="obs" placeholder="Adicione uma Observação">
-  </main>
+</main>
 
-  <footer>
+<footer>
     <button class="footer-button save">Salvar</button>
     <div class="total">Total: R$ 109,80</div>
     <button class="footer-button cancel">Cancelar</button>
-  </footer>
+</footer>
+
+<script>
+
+window.onload = function () {
+    document.getElementById("cliente").value = localStorage.getItem("cliente") || "";
+    document.getElementById("obs").value = localStorage.getItem("obs") || "";
+  };
+
+  document.querySelector(".save").addEventListener("click", function () {
+    const cliente = document.getElementById("cliente").value;
+    const obs = document.getElementById("obs").value;
+
+    localStorage.setItem("cliente", cliente);
+    localStorage.setItem("obs", obs);
+
+    alert("Dados salvos!");
+  });
+</script>
+
+
 </body>
 </html>
