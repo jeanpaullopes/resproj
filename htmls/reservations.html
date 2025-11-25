@@ -12,48 +12,102 @@
         .main-background {
             background-color: rgb(43, 42, 42)
         }
+
+        .brilho-azul {
+        box-shadow: 0 0 10px 5px blue, 0 0 20px 10px lightblue;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+    .brilho-vermelho {
+        box-shadow: 0 0 10px 5px red, 0 0 20px 10px #ff4747;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    
+    .header-icon {
+  color: rgb(255, 47, 47);
+  font-size: 36px; 
+  text-decoration: none;
+  margin-top: 25px;
+  line-height: 1; 
+}
+
     </style>
 </head>
 <body>
-    <header>
+        <header>
         <div class="header-background">
-            <div class="header-left" style="position: relative; top: 9px; color: rgb(255, 47, 47); font-size: 36px;">⭠</div>
-            <div class="header-up" style="position: relative; top: 35px; color: rgb(255, 47, 47); font-size: 21px;">Comandas</div>
-            <div class="header-right" style="position: relative; top: 9px; color: rgb(255, 47, 47); font-size: 21px;">☰</div>
-        </div>    
-    </header>   
+            <a href="homepage.html"
+
+       class="header-icon" >
+
+      ⭠
+
+    </a>
+        <img src="../assets/homepage/imgIconeDoApp.jpeg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-top: 22px;">
+    <div class="header-icon" style="position: relative; top: 10px; left: -2px;  color: rgb(255, 47, 47); font-size: 21px;">☰</div>
+
+    </header> 
+
         <main>
-            <div class="main-background" style="background-color: rgb(43, 42, 42); text-align: center; padding: 20px;">
-        <div class="main-up" style="position: relative; top: 1px; color: rgb(255, 47, 47); font-size: 21px;">Mesas</div>
+            <div class="main-background" style="background-color: rgb(43, 42, 42); text-align: center; padding: 0px;">
+        <div class="main-up" style="position: relative; left: -5px; top: 1px; color: rgb(255, 47, 47); top: 25px; font-size: 21px;">Mesas</div>
     <div style="
         display: grid;
-        grid-template-columns: repeat(3, 130px);
-        gap: 30px;
+        grid-template-columns: repeat(3, 115px);
+        gap: 5px;
+        row-gap: 20px;
         justify-content: center;
-        margin-top: -15px;
-    ">
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">01</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">02</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">03</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">04</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">05</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">06</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">07</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">08</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">09</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">10</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">11</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">12</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">13</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">14</div>
-        <div style="width: 130px; height: 130px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">15</div>
-    </div>
+        margin-top: 15px;
+        margin-bottom: 30px; ">
+
+        <div id="mesa1" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">01</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">02</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">03</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">04</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">05</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">06</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">07</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">08</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">09</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">10</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">11</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">12</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">13</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">14</div>
+<div class="mesa-secundaria" style="width: 100px; height: 100px; background: #ffd700; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 37px; border-radius: 3px;">15</div>
 </div>
+
 <body style="background-color: rgb(43, 42, 42);">
     </main>
     <footer>
         <div class="footer-background">
         </div>
     </footer>
+
+    <script>
+
+    const mesa1 = document.getElementById('mesa1');
+    const urlDestino = 'requests.html';
+
+    mesa1.addEventListener('click', function() {
+        this.classList.add('brilho-azul');
+
+        setTimeout(() => {
+            this.classList.remove('brilho-azul');
+            
+            window.location.href = urlDestino;
+        }, 300); 
+    });
+    const mesasSecundarias = document.querySelectorAll('.mesa-secundaria');
+
+    mesasSecundarias.forEach(mesa => {
+        mesa.addEventListener('click', function() {
+            mesasSecundarias.forEach(m => m.classList.remove('brilho-vermelho'));
+
+            this.classList.add('brilho-vermelho');
+        });
+    });
+
+</script>
 </body>
 </html>
