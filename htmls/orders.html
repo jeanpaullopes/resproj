@@ -10,11 +10,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="sidebar" id="sidebar">
+        <br>
+        <h1 style="font-size: 34px; color: #ffd700;">Pizzaria dos Guri</h1>
+        <a href="reservations.html">Fazer uma Reserva</a>
+        <a href="promotions.html">Ver Promoções</a>
+        <a href="homepage.html">Pedir um Delivery</a>
+        <a href="trackorder.html">Acompanhar Pedido</a>
+        <a href="homepage.html">Trabalhe Conosco</a>
+    </div>
+
     <header>
         <div class="header-background">
-            <div class="header-left"><img src="/img/returnIcon.png" alt="Menu" class="header-return"></div>
+            <div class="header-left">
+                <a href="/htmls/homepage.html">
+                    <img src="/img/returnIcon.png" alt="Menu" class="header-return">
+                </a>
+            </div>
             <div class="header-center"><img src="/img/logo.png" alt="Menu" class="header-logo"></div>
-            <div class="header-right"><img src="/img/moreIcon.png" alt="Menu" class="header-more"></div>
+            <div class="header-right" id="openMenu" class="header-right"><img src="/img/moreIcon.png" alt="Menu" class="header-more"></div>
         </div>
     </header>
     <main>
@@ -107,5 +122,13 @@
                 <img src="/img/botao_perfil.png" alt="Perfil" class="footer-icons"></a>
         </div>
     </footer>
+        <script>
+        const openMenu = document.getElementById("openMenu");
+        const sidebar = document.getElementById("sidebar");
+
+        openMenu.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>
