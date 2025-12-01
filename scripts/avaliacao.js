@@ -43,5 +43,7 @@ function avaliar(order, ratingOrder, ratingReception) {
         order.removeChild(lastRating);
     } 
 
-    if (!(ratingOrder + ratingReception == 0)) order.appendChild(rating);
+    if (!(ratingOrder + ratingReception == 0)) {
+        order.appendChild(rating);
+    }
 }
