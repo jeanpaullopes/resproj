@@ -10,11 +10,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="sidebar" id="sidebar">
+        <br>
+        <h1 style="font-size: 34px; color: #ffd700;">Pizzaria dos Guri</h1>
+        <a href="reservations.html">Fazer uma Reserva</a>
+        <a href="promotions.html">Ver Promoções</a>
+        <a href="homepage.html">Pedir um Delivery</a>
+        <a href="trackorder.html">Acompanhar Pedido</a>
+        <a href="homepage.html">Trabalhe Conosco</a>
+    </div>
+
     <header>
         <div class="header-background">
-            <div class="header-left"><img src="/img/returnIcon.png" alt="Menu" class="header-return"></div>
+            <div class="header-left">
+                <a href="/htmls/homepage.html">
+                    <img src="/img/returnIcon.png" alt="Menu" class="header-return">
+                </a>
+            </div>
             <div class="header-center"><img src="/img/logo.png" alt="Menu" class="header-logo"></div>
-            <div class="header-right"><img src="/img/moreIcon.png" alt="Menu" class="header-more"></div>
+            <div class="header-right" id="openMenu" class="header-right"><img src="/img/moreIcon.png" alt="Menu" class="header-more"></div>
         </div>
     </header>
     <main>
@@ -40,8 +55,8 @@
                 </div>
                 <div class="main-settings-cards">
                     <div class="settings-card">
-                        <img src="/img/cumpomm.png" class="moreOptions">
-                        <h5 style="margin:0;">Cupons</h5>
+                        <img src="/img/pedidos.png" class="moreOptions">
+                        <h5 style="margin:0;">Pedidos</h5>
                     </div>
                 </div>
             </div>
@@ -69,7 +84,7 @@
                         <img src="/img/suporte.png" class="profileOptions">
                         <div class="settings-list-title">
                             <h5 style="margin:0;">Suporte</h5>
-                            <h6 style="margin:0; color:gray;">Chat aberto 24hrs</h6>
+                            <h6 style="margin:0; color:gray;">Atendimento aberto 24hrs</h6>
                         </div>
                     </div>
                 </div>
@@ -93,5 +108,13 @@
                 <img src="/img/botao_perfil_now.png" alt="Perfil" class="footer-icons"></a>
         </div>
     </footer>
+            <script>
+        const openMenu = document.getElementById("openMenu");
+        const sidebar = document.getElementById("sidebar");
+
+        openMenu.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>

@@ -23,19 +23,28 @@
 
 </head>
 <body>
+
+    <div class="sidebar" id="sidebar">
+        <br>
+        <h1 style="font-size: 34px; color: #ffd700;">Pizzaria dos Guri</h1>
+        <a href="reservations.html">Fazer uma Reserva</a>
+        <a href="promotions.html">Ver Promoções</a>
+        <a href="homepage.html">Pedir um Delivery</a>
+        <a href="trackorder.html">Acompanhar Pedido</a>
+        <a href="homepage.html">Trabalhe Conosco</a>
+    </div>
+
     <header>
         <div class="header-background">
-            <a href="homepage.html"
-
-       class="header-icon" >
-
-      ⭠
-
-    </a>
-        <img src="../assets/homepage/imgIconeDoApp.jpeg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-top: 22px;">
-    <div class="header-icon" style="position: relative; top: 10px; left: -2px;  color: rgb(255, 47, 47); font-size: 21px;">☰</div>
-
-    </header> 
+            <div class="header-left">
+                <a href="/htmls/homepage.html">
+                    <img src="/img/returnIcon.png" alt="Menu" class="header-return">
+                </a>
+            </div>
+            <div class="header-center"><img src="/img/logo.png" alt="Menu" class="header-logo"></div>
+            <div class="header-right" id="openMenu" class="header-right"><img src="/img/moreIcon.png" alt="Menu" class="header-more"></div>
+        </div>
+    </header>
 
 <main>
     <div class="main-background">
@@ -86,12 +95,27 @@
 
     <footer>
         <div class="footer-background">
-        </div>
+            <a href="/index.html" class="footer-one">
+                <img src="/img/botao_home.png" alt="Home" class="footer-icons"></a></a>
+            
+            
+            <a href="menu.html" class="footer-two">
+                <img src="/img/botao_menu.png" alt="Menu" class="footer-icons"></a>
+            
+            
+            <a href="orders.html" class="footer-three">
+                <img src="/img/botao_pedidos.png" alt="Pedidos" class="footer-icons"></a>
+            
+            <a href="profile.html" class="footer-four">
+                <img src="/img/botao_perfil.png" alt="Perfil" class="footer-icons"></a>
     </footer>
-
     <script>
+        const openMenu = document.getElementById("openMenu");
+        const sidebar = document.getElementById("sidebar");
 
-    
-</script>
+        openMenu.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>
