@@ -1,5 +1,11 @@
 let filter = "";
 
+let loginEmail = localStorage.getItem("userEmail");
+
+if (!loginEmail) window.location.href = "/htmls/login.html"
+else console.log("logado como " + loginEmail);
+
+
 if (window.location.pathname == "/index.html") filter = "salgadas";
 else {
     document.getElementById('filter-all').addEventListener('click', (event) => {
