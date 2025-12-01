@@ -10,5 +10,5 @@ form.addEventListener("submit", (event) => {
 function login(email, name) {
     localStorage.setItem("userEmail", email);
     localStorage.setItem("userName", name);
-    window.location.href = "/index.html"
+    window.location.href = "/htmls/homepage.html"
 }
