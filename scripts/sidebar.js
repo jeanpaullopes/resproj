@@ -23,5 +23,4 @@ if (isClient) {
 
     sidebar.appendChild(management)
     sidebar.appendChild(manage)
-    console.log(management);
 }
