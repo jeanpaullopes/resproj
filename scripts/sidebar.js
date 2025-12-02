@@ -1,6 +1,5 @@
 const openMenu = document.getElementById("openMenu");
 const sidebar = document.getElementById("sidebar");
-const isClient = localStorage.getItem("isClient");
 
 openMenu.addEventListener("click", () => {
     sidebar.classList.toggle("open");
@@ -10,9 +9,35 @@ sidebar.addEventListener("click", () => {
     sidebar.classList.toggle("open");
 })
 
-if (isClient) {
+let promotions = document.createElement('a');
+promotions.innerHTML = "Ver Promoções";
+promotions.href = "/htmls/promotions.html";
+
+let delivery = document.createElement('a');
+delivery.innerHTML = "Pedir um Delivery";
+delivery.href = "/htmls/homepage.html";
+
+let tracking = document.createElement('a');
+tracking.innerHTML = "Acompanhar Pedido";
+tracking.href = "/htmls/trackorder.html";
+
+let work = document.createElement('a');
+work.innerHTML = "Trabalhe Conosco";
+work.href = "/htmls/homepage.html";
+
+sidebar.appendChild(promotions);
+sidebar.appendChild(delivery);
+sidebar.appendChild(tracking);
+sidebar.appendChild(work);
+
+if (localStorage.getItem("isClient") === "false") {
+    let comanda = document.createElement('a')
+    comanda.innerHTML = "Gerenciar Mesas";
+    comanda.href = "/htmls/reservations.html";
+    comanda.style.color = "lightgreen"
+
     let management = document.createElement('a')
-    management.innerHTML = "Gerenciamento";
+    management.innerHTML = "Gerenciar Cardápio";
     management.href = "/htmls/management.html";
     management.style.color = "lightgreen"
     
@@ -21,6 +46,7 @@ if (isClient) {
     manage.href = "/htmls/manage.html";
     manage.style.color = "lightgreen"
 
-    sidebar.appendChild(management)
-    sidebar.appendChild(manage)
+    sidebar.appendChild(comanda);
+    sidebar.appendChild(management);
+    sidebar.appendChild(manage);
 }
