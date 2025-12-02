@@ -755,6 +755,7 @@ body.management-page {
     font-size: 28px;
     cursor: pointer;
     color: #333;
+    text-decoration: none;
 }
 
 .modal-content-form h1 {
